@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body onload="LoadPop()">
+    AAAA
+    <script>
+        function openWindow() {
+            window.open("placard.html", "", "width=352, height=193")
+        }
+
+        function getCookie(name) {
+            var search = name + "=";
+            var returnvalue = "";
+            var offset, end;
+            if (document.cookie.length > 0) {
+                offset = document.cookie.indexOf(search);
+                if (offset != -1) {
+                    offset += search.length;
+                    end = document.cookie.indexOf(";", offset);
+                    if (end == -1) end = document.cookie.length;
+                    returnvalue = unescape(document.cookie.substring(offset, end))
+                }
+            }
+            return returnvalue
+        }
+
+        function LoadPop() {
+            if (getCookie("pop") == "") {
+                openWindow();
+                var today = new Date()
+                var time = "Sunday,1-jan-" + today.getYear() + 1 + " 23:59:59 GMC";
+                document.cookie = "pop=yes;expires=" + time;
+            }
+        }
+    </script>
+
+</body>
+
+</html>

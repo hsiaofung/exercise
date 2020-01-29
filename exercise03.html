@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    AAA
+    <map name="Map">
+        <area shape="rect" coords="82,17,125,39" href="#" onclick="manage()">
+        <area shape="circle" coords="49,28,14">
+        <button onclick="manage()">click</button>
+    </map>
+</body>
+
+<script>
+    //開啟視窗置中顯示
+    function manage() {
+        var myWindow = window.open("./Login_M.html", "", "width = 400, height = 300")
+        width = screen.width;
+        height = screen.height;
+        myWindow.moveTo((width - 400) / 2, (height - 300) / 2)
+    }
+    // function manage() {
+    //     var hdc = window.open("Login_M.html", "", 'width=322, height=206')
+    //     width = screen.width;
+    //     height = screen.height;
+    //     hdc.moveTo((width - 322) / 2, (height - 206) / 2);
+    // }
+</script>
+
+</html>
