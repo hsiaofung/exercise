@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <button class="btn_grey" onClick="window.opener=null;window.close()">關閉</button>
+    <script>
+        function myCheck() {
+            alert("關閉子視窗")
+            console.log(window.opener.location)
+            //cross origin issue，同一個伺服器可以。但在本地端不行。
+            window.opener.location.reload();
+
+            window.close()
+        }
+    </script>
+</body>
+
+</html>
