@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <table>
+        <tr>
+            <td><select name="yearList" onChange="display_month()"></select></td>
+            <td>
+                <select name="monthList" onChange="display_month()">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <table>
+                    <tr>
+                        <td bgcolor="#82664F">
+                            <table>
+                                <tr>
+                                    <td width="31" align="center" BGCOLOR="#0099FF">
+                                        <font color="#FF0000">日</font>
+                                    </td>
+                                    <td width="31" align="center" BGCOLOR="#0099FF">一</td>
+                                    <td width="31" align="center" BGCOLOR="#0099FF">二</td>
+                                    <td width="31" align="center" BGCOLOR="#0099FF">三</td>
+                                    <td width="31" align="center" BGCOLOR="#0099FF">四</td>
+                                    <td width="31" align="center" BGCOLOR="#0099FF">五</td>
+                                    <td width="31" align="center" BGCOLOR="#0099FF">六</td>
+                                </tr>
+                                <tr bgcolor="#FFFFFF" height="18">
+                                    <td>
+                                        <input type="text" size="2" name="dayBox" readOnly
+                                            onClick="javascipt:CheckDate(this.value)" onMouse
+                                            Over="this.style.background='#EEEEEE'"
+                                            onmouseout="this.style.background='white'"></td>
+                                    <td>
+                                        <input type="text" size="2" name="dayBox" readOnly
+                                            onClick="javascipt:CheckDate(this.value)" onMouse
+                                            Over="this.style.background='#EEEEEE'"
+                                            onmouseout="this.style.background='white'"></td>
+                                    <td>
+                                        <input type="text" size="2" name="dayBox" readOnly
+                                            onClick="javascipt:CheckDate(this.value)" onMouse
+                                            Over="this.style.background='#EEEEEE'"
+                                            onmouseout="this.style.background='white'"></td>
+                                    <td>
+                                        <input type="text" size="2" name="dayBox" readOnly
+                                            onClick="javascipt:CheckDate(this.value)" onMouse
+                                            Over="this.style.background='#EEEEEE'"
+                                            onmouseout="this.style.background='white'"></td>
+                                    <td>
+                                        <input type="text" size="2" name="dayBox" readOnly
+                                            onClick="javascipt:CheckDate(this.value)" onMouse
+                                            Over="this.style.background='#EEEEEE'"
+                                            onmouseout="this.style.background='white'"></td>
+                                    <td>
+                                        <input type="text" size="2" name="dayBox" readOnly
+                                            onClick="javascipt:CheckDate(this.value)" onMouse
+                                            Over="this.style.background='#EEEEEE'"
+                                            onmouseout="this.style.background='white'"></td>
+                                    <td>
+                                        <input type="text" size="2" name="dayBox" readOnly
+                                            onClick="javascipt:CheckDate(this.value)" onMouse
+                                            Over="this.style.background='#EEEEEE'"
+                                            onmouseout="this.style.background='white'"></td>
+                                </tr>
+                                <tr bgcolor="#FFFFFF" height="18">
+                                    <td>
+                                        <input type="text" size="2" name="dayBox" readOnly
+                                            onClick="javascipt:CheckDate(this.value)" onMouse
+                                            Over="this.style.background='#EEEEEE'"
+                                            onmouseout="this.style.background='white'"></td>
+                                    <td>
+                                        <input type="text" size="2" name="dayBox" readOnly
+                                            onClick="javascipt:CheckDate(this.value)" onMouse
+                                            Over="this.style.background='#EEEEEE'"
+                                            onmouseout="this.style.background='white'"></td>
+                                    <td>
+                                        <input type="text" size="2" name="dayBox" readOnly
+                                            onClick="javascipt:CheckDate(this.value)" onMouse
+                                            Over="this.style.background='#EEEEEE'"
+                                            onmouseout="this.style.background='white'"></td>
+                                    <td>
+                                        <input type="text" size="2" name="dayBox" readOnly
+                                            onClick="javascipt:CheckDate(this.value)" onMouse
+                                            Over="this.style.background='#EEEEEE'"
+                                            onmouseout="this.style.background='white'"></td>
+                                    <td>
+                                        <input type="text" size="2" name="dayBox" readOnly
+                                            onClick="javascipt:CheckDate(this.value)" onMouse
+                                            Over="this.style.background='#EEEEEE'"
+                                            onmouseout="this.style.background='white'"></td>
+                                    <td>
+                                        <input type="text" size="2" name="dayBox" readOnly
+                                            onClick="javascipt:CheckDate(this.value)" onMouse
+                                            Over="this.style.background='#EEEEEE'"
+                                            onmouseout="this.style.background='white'"></td>
+                                    <td>
+                                        <input type="text" size="2" name="dayBox" readOnly
+                                            onClick="javascipt:CheckDate(this.value)" onMouse
+                                            Over="this.style.background='#EEEEEE'"
+                                            onmouseout="this.style.background='white'"></td>
+                                </tr>
+                                <tr bgcolor="#FFFFFF" height="18">
+                                    <td>
+                                        <input type="text" size="2" name="dayBox" readOnly
+                                            onClick="javascipt:CheckDate(this.value)" onMouse
+                                            Over="this.style.background='#EEEEEE'"
+                                            onmouseout="this.style.background='white'"></td>
+                                    <td>
+                                        <input type="text" size="2" name="dayBox" readOnly
+                                            onClick="javascipt:CheckDate(this.value)" onMouse
+                                            Over="this.style.background='#EEEEEE'"
+                                            onmouseout="this.style.background='white'"></td>
+                                    <td>
+                                        <input type="text" size="2" name="dayBox" readOnly
+                                            onClick="javascipt:CheckDate(this.value)" onMouse
+                                            Over="this.style.background='#EEEEEE'"
+                                            onmouseout="this.style.background='white'"></td>
+                                    <td>
+                                        <input type="text" size="2" name="dayBox" readOnly
+                                            onClick="javascipt:CheckDate(this.value)" onMouse
+                                            Over="this.style.background='#EEEEEE'"
+                                            onmouseout="this.style.background='white'"></td>
+                                    <td>
+                                        <input type="text" size="2" name="dayBox" readOnly
+                                            onClick="javascipt:CheckDate(this.value)" onMouse
+                                            Over="this.style.background='#EEEEEE'"
+                                            onmouseout="this.style.background='white'"></td>
+                                    <td>
+                                        <input type="text" size="2" name="dayBox" readOnly
+                                            onClick="javascipt:CheckDate(this.value)" onMouse
+                                            Over="this.style.background='#EEEEEE'"
+                                            onmouseout="this.style.background='white'"></td>
+                                    <td>
+                                        <input type="text" size="2" name="dayBox" readOnly
+                                            onClick="javascipt:CheckDate(this.value)" onMouse
+                                            Over="this.style.background='#EEEEEE'"
+                                            onmouseout="this.style.background='white'"></td>
+                                </tr>
+                                <tr bgcolor="#FFFFFF" height="18">
+                                    <td>
+                                        <input type="text" size="2" name="dayBox" readOnly
+                                            onClick="javascipt:CheckDate(this.value)" onMouse
+                                            Over="this.style.background='#EEEEEE'"
+                                            onmouseout="this.style.background='white'"></td>
+                                    <td>
+                                        <input type="text" size="2" name="dayBox" readOnly
+                                            onClick="javascipt:CheckDate(this.value)" onMouse
+                                            Over="this.style.background='#EEEEEE'"
+                                            onmouseout="this.style.background='white'"></td>
+                                    <td>
+                                        <input type="text" size="2" name="dayBox" readOnly
+                                            onClick="javascipt:CheckDate(this.value)" onMouse
+                                            Over="this.style.background='#EEEEEE'"
+                                            onmouseout="this.style.background='white'"></td>
+                                    <td>
+                                        <input type="text" size="2" name="dayBox" readOnly
+                                            onClick="javascipt:CheckDate(this.value)" onMouse
+                                            Over="this.style.background='#EEEEEE'"
+                                            onmouseout="this.style.background='white'"></td>
+                                    <td>
+                                        <input type="text" size="2" name="dayBox" readOnly
+                                            onClick="javascipt:CheckDate(this.value)" onMouse
+                                            Over="this.style.background='#EEEEEE'"
+                                            onmouseout="this.style.background='white'"></td>
+                                    <td>
+                                        <input type="text" size="2" name="dayBox" readOnly
+                                            onClick="javascipt:CheckDate(this.value)" onMouse
+                                            Over="this.style.background='#EEEEEE'"
+                                            onmouseout="this.style.background='white'"></td>
+                                    <td>
+                                        <input type="text" size="2" name="dayBox" readOnly
+                                            onClick="javascipt:CheckDate(this.value)" onMouse
+                                            Over="this.style.background='#EEEEEE'"
+                                            onmouseout="this.style.background='white'"></td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+    </td>
+    </tr>
+    </table>
+</body>
+
+</html>
