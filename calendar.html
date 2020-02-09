@@ -201,9 +201,39 @@
             </td>
         </tr>
     </table>
-    </td>
-    </tr>
-    </table>
+    <script>
+        var monthNames = new Array("", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12");
+        var endDay = new Array(0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31);
+        var dayNow = 0;
+        var monthNow = 0;
+        var yearNow = 0;
+
+        function load(form) {
+            set_month_year_now();
+            var found = false;
+            for (var month = 0; month < form.monthList.length; month++) {
+                if (form.monthList[month].text == monthNames[monthNow]) {
+                    form.monthList[month].selected = true;
+                    found = true;
+                }
+            }
+            if (!found) {
+                error();
+                return;
+            }
+            var found = false;
+            for (var year = 0; year < form.yearList.length; year++)
+                if (form.yearList[year].text == yearNow) {
+                    form.yearList[year].selected = true;
+                    found = true;
+                }
+            if (!found) {
+                error();
+                return;
+            }
+
+        }
+    </script>
 </body>
 
 </html>
