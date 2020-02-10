@@ -35,6 +35,10 @@
         background: #e9f8df;
         /*浅绿色背景*/
       }
+      .darkgreen {       
+        background: darkgreen;
+        /*浅绿色背景*/
+      }
       .lightgreen {
         color: lightgreen;
       }
@@ -57,6 +61,9 @@
         <h2 class="lightgreen" id="calendar-year">Year</h2>
         <a href="" id="prev">preMonth</a>
         <a href="" id="next">nextMonth</a>
+        <div>start: <input id="startDate" type="date"></input>end: <input id="endDate" type="date"></input></div>
+        
+        
       </div>
       <div class="body body-list">
         <ul>
@@ -95,10 +102,15 @@
       var next = document.getElementById("next");
       var ctitle = document.getElementById("calendar-title");
       var cyear = document.getElementById("calendar-year");
+      var startDate = document.getElementById("startDate")
+      var endDate = document.getElementById("endDate")
       var my_date = new Date();
       var my_year = my_date.getFullYear();
       var my_month = my_date.getMonth(); //0-11
       var my_day = my_date.getDate();
+      var my_start = null; 
+      var my_end = null; 
+      
       //某年某月是星期幾?
       function dayStart(month, year) {
         var tmp = new Date(year, month, 1);
@@ -165,6 +177,15 @@
         }
         refreshDate();
       };
+      startDate.onchange = function(e){
+        e.preventDefault();       
+        my_start = new Date(e.target.value);
+        
+      }
+      endDate.onchange = function(e){
+        e.preventDefault();
+        my_end = new Date(e.target.value);
+      }
     </script>
   </body>
 </html>
