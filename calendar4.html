@@ -148,8 +148,9 @@
             my_year == my_date.getFullYear() &&
             my_month == my_date.getMonth()
           ) {
-            myclass = " class='green greenbox'"; //當天日期以綠色背景突出顯示
-          } else {
+            myclass = " class='green greenbox'"; //選擇的日期以深綠色背景突出顯示
+          }          
+          else {
             myclass = " class='black'"; //當該日期在今天之後，以深灰色字體顯示
           }
           str += "<li" + myclass + ">" + i + "</li>"; // 創建日期節點
