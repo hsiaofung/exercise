@@ -43,6 +43,12 @@
             color: black;
         }
 
+        .yellow-box {
+            color: white;
+            background: yellowgreen;
+            box-sizing: border-box;
+        }
+
         #prev {
             float: left;
         }
@@ -57,10 +63,13 @@
 
 <body>
     <div class="wrap">
+        <input id="start" type="date" name="start"><input id="end" type="date" name="end">
         <h1 id="month">February</h1>
         <h2 id="year">2020</h2>
+
         <a id="prev">prev</a> <a id="next">next</a>
         <div style="clear: both;"></div>
+
         <ul class="list">
             <li>Sun</li>
             <li>Mon</li>
@@ -96,10 +105,14 @@
         const yearNode = document.getElementById("year")
         const next = document.getElementById("next")
         const prev = document.getElementById("prev")
+        const startNode = document.getElementById("start")
+        const endNode = document.getElementById("end")
         const today = new Date()
         let date = today.getDate();
         let month = today.getMonth();
         let year = today.getFullYear();
+        let startDate;
+        let endDate;
 
         function startDay(month, year) {
             const tmp = new Date(year, month, 1)
@@ -114,6 +127,16 @@
             const thisYear = date.getFullYear();
             let str = "";
             let myclass = "";
+            let tmp = new Date(startDate);
+            let myDate = tmp.getDate();
+            let myMonth = tmp.getMonth();
+            let myYear = tmp.getFullYear();
+
+            let tmp2 = new Date(endDate);
+            let myEndDate = tmp2.getDate();
+            let myEndMonth = tmp2.getMonth();
+            let myEndYear = tmp2.getFullYear();
+
 
             for (var i = 0; i < startDay(month, year); i++) {
                 str = str + "<li></li>"
@@ -121,10 +144,16 @@
 
             for (var i = 1; i <= totalDate; i++) {
                 if (i < today && month === thisMonth && year === thisYear || month < thisMonth && year === thisYear ||
-                    year < thisYear)
+                    year < thisYear) {
                     myclass = "light-gray"
-                else if (i === today && month === thisMonth && year === thisYear) {
+                } else if (i === today && month === thisMonth && year === thisYear) {
                     myclass = "green-box"
+                } else if (myDate != undefined &&
+                    ((myDate <= i) && (i <= myEndDate) && (myMonth <= month) && (month <= myEndMonth) && (myYear <=
+                        year) && (year <= myEndYear) || (myMonth <= month) && (month <= myEndMonth) && (myYear <=
+                        year) && (year <= myEndYear) || (myYear <=
+                        year) && (year <= myEndYear))) {
+                    myclass = "yellow-box"
                 } else {
                     myclass = "black"
                 }
@@ -152,6 +181,17 @@
             printDate(month, year)
         }, false)
 
+        startNode.addEventListener('change', function (e) {
+            e.preventDefault();
+            startDate = e.target.value;
+            printDate(month, year)
+        }, false)
+
+        endNode.addEventListener('change', function (e) {
+            e.preventDefault();
+            endDate = e.target.value;
+            printDate(month, year)
+        }, false)
 
         printDate(month, year)
     </script>
