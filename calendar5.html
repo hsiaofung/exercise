@@ -129,7 +129,7 @@
             let myclass = "";
             let tmp = new Date(startDate);
             let myDate = tmp.getDate();
-            let myMonth = tmp.getMonth();
+            let myMonth = tmp.getMonth(); //start 
             let myYear = tmp.getFullYear();
 
             let tmp2 = new Date(endDate);
@@ -148,12 +148,29 @@
                     myclass = "light-gray"
                 } else if (i === today && month === thisMonth && year === thisYear) {
                     myclass = "green-box"
-                } else if (myDate != undefined &&
-                    ((myDate <= i) && (i <= myEndDate) && (myMonth <= month) && (month <= myEndMonth) && (myYear <=
-                        year) && (year <= myEndYear) || (myMonth <= month) && (month <= myEndMonth) && (myYear <=
-                        year) && (year <= myEndYear) || (myYear <=
-                        year) && (year <= myEndYear))) {
-                    myclass = "yellow-box"
+                } else if (year === myYear && month === myMonth && myMonth === myEndMonth) { //同年同月
+                    if (i >= myDate && i <= myEndDate) {
+                        myclass = "yellow-box"
+                    } else {
+                        myclass = "black"
+                    }
+                } else if (year === myYear && myMonth !== myEndMonth && myMonth <= month && myEndMonth >=
+                    month) { //同年不同月
+                    if (month === myMonth) {
+                        if (i >= myDate) {
+                            myclass = "yellow-box"
+                        } else {
+                            myclass = "black"
+                        }
+                    } else if (month === myEndMonth) {
+                        if (i <= myEndDate) {
+                            myclass = "yellow-box"
+                        } else {
+                            myclass = "black"
+                        }
+                    } else {
+                        myclass = "yellow-box"
+                    }
                 } else {
                     myclass = "black"
                 }
