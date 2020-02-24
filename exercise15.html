@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button onclick="go1()">click</button>
+    <script>
+      var winheight, winsize, x, win2;
+      function go1() {
+        winheight = 100;
+        winsize = 100;
+        x = 5;
+        win2 = window.open("melody.html", "", "scrollbars='no'");
+        win2.moveTo(0, 0);
+        win2.resizeTo(100, 100);
+        go2();
+      }
+      function go2() {
+        if (winheight >= window.screen.availHeight - 3) x = 0;
+        win2.resizeBy(5, x);
+        winheight += 5;
+        winsize += 5;
+        if (winsize >= window.screen.width - 5) {
+          winheight = 100;
+          winsize = 100;
+          x = 5;
+          return;
+        }
+        setTimeout(go2, 50);
+      }
+      go1();
+    </script>
+  </body>
+</html>
